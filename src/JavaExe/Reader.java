@@ -13,9 +13,10 @@ public class Reader extends JFrame {
     JTextField t1, t2;
     JToolBar tool1;
     JCheckBox cb1, cb2, cb3, cb4, cb5, cb6, cb7;
-    int i, k;
-    String a, b;
     eHandler handler = new eHandler();
+
+    boolean boo1;
+    boolean boo2;
 
     public Reader(String s) {
         super(s);
@@ -61,7 +62,10 @@ public class Reader extends JFrame {
 
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == b2) {
-
+                boo1 = cb1.isSelected();
+                boo2 = cb2.isSelected();
+                l3.setText(String.valueOf(boo1));
+                l4.setText(String.valueOf(boo2));
             }
             if (e.getSource() == b1) {
                 t1.setText(null);
